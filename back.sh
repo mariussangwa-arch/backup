@@ -3,6 +3,8 @@
 read -p "Enter the folder path: " path
 path=${path:-$HOME/Documents}
 
+path="${path//\\//}"
+
 if [ ! -d "$path" ]; then
   echo "The folder is invalid"
 
